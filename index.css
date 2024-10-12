@@ -7,6 +7,7 @@
 
 .container {
   margin: 20px;
+  max-width: 100%;
 }
 
 .logo h1 {
@@ -19,6 +20,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .left-bar a {
@@ -51,6 +53,45 @@
   border: 1px solid #717171;
 }
 
+
+/* Responsive navbar for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack the navbar items vertically */
+    align-items: center; /* Align to the left */
+  }
+
+  .left-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+
+  .right-bar {
+    margin-top: 10px; /* Add some spacing */
+    width: 100%; /* Stretch input to full width */
+    justify-content: center;
+  }
+
+  .right-bar input {
+    width: 100%; /* Adjust search box width */
+    margin-left: 20px;
+  }
+
+  .logo h1 {
+    font-size: 28px; /* Adjust font size */
+  }
+
+  .left-bar a {
+    font-size: 18px; /* Adjust font size for links */
+  }
+}
+
 hr {
   margin-left: 20px;
 }
@@ -77,6 +118,29 @@ hr {
   margin-left: auto;
   margin-right: auto;
 }
+
+@media (max-width: 1021px){
+  .shop{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .item {
+    width: 48%; 
+    margin-bottom: 20px; 
+  }
+}
+
+@media (max-width: 659px){
+  .shop{
+    flex-direction: column;
+  }
+  .item {
+    width: 100%; 
+   
+  }
+}
+
 
 .list a {
   text-decoration: none;
@@ -257,4 +321,9 @@ hr {
   font-size: 18px;
   width: 600px;
 }
+
+.bestSellers{
+  width: 100%;
+}
+
 
